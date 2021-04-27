@@ -8,5 +8,5 @@ class Medida1(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True)
     modification_date = models.DateTimeField(auto_now=True)
 
-    def __str__():
+    def __str__(self):
         return "{} Volts".format(self.tensao_eletrica)

@@ -9,8 +9,9 @@ import json
 def visualizar_dados(request):
 
     # fazer oque vc quiser
+    medidas = Medida1.objects.all()
 
-    return render(request, "pidata/dados.html")
+    return render(request, "pidata/dados.html", context={"medidas": medidas})
 
 
 @csrf_exempt

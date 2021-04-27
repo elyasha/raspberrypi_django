@@ -3,4 +3,9 @@
 {% block content %}
 <h1>Visualizar dados</h1>
 
+{% for medida in  medidas %}
+
+<p>Tensao eletrica: {{medida.tensao_eletrica}} - {{medida.creation_date}} </p>
+
+{% endfor %}
 {% endblock content %}
