@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
+from raspberryfr.pidata.models import Medida1
 
 import json
 
@@ -27,7 +28,8 @@ def receber_dados(request):
         print("Tensão elétrica é de {}".format(objeto_json["tensao"]))
         print("Corrente elétrica é de {}".format(objeto_json["corrente"]))
 
-
+        medida1 = Medida1.objects.create(tensao_eletrica=objeto_json["tensao"])
+        medida1.save()
         # Criar uma nova leitura de dados
 
         # Dar o timestamp

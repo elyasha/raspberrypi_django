@@ -1,3 +1,6 @@
 from django.contrib import admin
+from raspberryfr.pidata.models import Medida1
 
-# Register your models here.
+@admin.register(Medida1)
+class Medida1Admin(admin.ModelAdmin):
+    pass
